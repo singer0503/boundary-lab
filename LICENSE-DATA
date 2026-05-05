@@ -1,0 +1,29 @@
+CC0 1.0 Universal (Public Domain Dedication)
+
+This license applies to all raw experimental data files in data/raw/, and
+their lossless derivative time-series exports.
+
+The person who associated a work with this deed has dedicated the work to
+the public domain by waiving all of his or her rights to the work worldwide
+under copyright law, including all related and neighboring rights, to the
+extent allowed by law.
+
+You can copy, modify, distribute and perform the work, even for commercial
+purposes, all without asking permission.
+
+Full legal text:
+  https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Plain-language summary:
+  https://creativecommons.org/publicdomain/zero/1.0/
+
+Why CC0 for raw data:
+  Raw measurements should belong to humanity. Any researcher anywhere
+  should be able to re-analyse our data, find our errors, or reuse it in
+  meta-analyses without licensing friction. Attribution is appreciated
+  but not legally required.
+
+Citation (appreciated but not required):
+  Boundary Lab raw experimental data,
+  https://github.com/singer0503/boundary-lab,
+  released under CC0 1.0 Universal.

@@ -1,0 +1,145 @@
+# ============================================================
+# Boundary Lab .gitignore
+# ============================================================
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Testing & type checking
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- IDE / Editor ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# --- Secrets & local config ---
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+.secrets
+config.local.*
+
+# --- Large binary / build artifacts ---
+*.exe
+*.dll
+*.dylib
+*.bin
+
+# ============================================================
+# Boundary Lab specific
+# ============================================================
+
+# Large raw data files — use Git LFS or external object store, not git
+data/raw/**/*.csv.gz
+data/raw/**/*.parquet
+data/raw/**/*.npz
+data/raw/**/*.h5
+data/raw/**/*.hdf5
+
+# But DO commit small samples and the directory structure markers
+!data/raw/.gitkeep
+!data/raw/**/MANIFEST.sha256
+!data/raw/**/incidents.md
+!data/raw/**/sample.csv
+
+# Processed data is regeneratable — never commit
+data/processed/
+
+# Analysis output (regenerate from raw)
+analysis/**/output/
+analysis/**/figures/
+*.png
+*.pdf
+*.svg
+# Exception: papers/ contains source PDFs we deliberately commit
+!papers/**/*.pdf
+# Exception: hardware schematics may need to be committed
+!hardware/**/*.pdf
+!hardware/**/*.svg
+!hardware/**/*.png
+
+# Large oscilloscope captures, video, audio
+*.wav
+*.mp4
+*.mov
+*.mkv
+
+# Calibration logs are committed; calibration scratch is not
+hardware/calibration-scratch/
+
+# Time-series DB local snapshots (when propulsion-bench is implemented)
+influxdb-data/
+prometheus-data/
+grafana-data/
+
+# --- Editor backup of large files ---
+*.bak
+*.tmp
+*.orig
+
+# --- Anthropic / Claude artifacts ---
+.claude/cache/
